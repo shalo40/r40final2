@@ -14,8 +14,10 @@ class CreateTickets extends Migration
     public function up()
     {
         Schema::create('Tickets', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
+            $table->String('Cod_Proced')->nullable();
+            $table->String('Desc_Proced')->nullable();
         });
     }
 

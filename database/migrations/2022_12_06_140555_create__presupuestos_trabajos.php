@@ -14,8 +14,10 @@ class CreatePresupuestosTrabajos extends Migration
     public function up()
     {
         Schema::create('Presupuestos_trabajos', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
             $table->timestamps();
+            $table->String('Cod_Proced')->nullable();
+            $table->String('Desc_Proced')->nullable();
         });
     }
 
